@@ -49,16 +49,18 @@
     </div>
     </nav>
 
-    <div class= "student">
-        <center><img src="./image/student.png"></center> 
-    </div>
-
-    <!-- <div class="content">
+    <div class="content">
         <div class="container">
+            <div class= "student">
+                <img src="./image/student.png">
+            </div>
             <h1>Welcome to SMS</h1>
         </div>
 
-    </div> -->
+    </div>
+
+    
+
 
 </div>
 
