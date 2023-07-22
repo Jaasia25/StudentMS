@@ -49,7 +49,7 @@
     </div>
     </nav>
 
-    <div class="content">
+    <!-- <div class="content">
         <div class="container">
             <div class= "student">
                 <img src="./image/student.png">
@@ -57,7 +57,7 @@
             <h1>Welcome to SMS</h1>
         </div>
 
-    </div>
+    </div> -->
 
     
 
