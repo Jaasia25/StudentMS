@@ -21,7 +21,7 @@ if(isset($_POST['submit'])){
         $_SESSION['dateof'] = $row['dof'];
         $_SESSION['pass'] = $row['password'];
         $_SESSION['sem'] = $row['semester'];
-        
+        header('location:home.php');
      }
     else
     {
