@@ -6,6 +6,12 @@ $sid = $_SESSION['valid'];
 
 if(!isset($sid)){
     header('location:signin.php');
+};
+
+if(isset($_GET['logout'])){
+    unset($sid);
+    session_destroy();
+    header('location:signin.php');
 }
 
 ?>
@@ -37,6 +43,7 @@ if(!isset($sid)){
 
 <div class="home_profile">
     <div class="container">
+        <center>
         <div class="profile">
             <?php
 
@@ -46,11 +53,26 @@ if(!isset($sid)){
             if(mysqli_num_rows($select) > 0){
                 $fetch = mysqli_fetch_assoc($select); 
             }
-
+            if($fetch['photo']==''){
+                echo '<img src="image/user.png">';
+            }
             ?>
 
             <h3><?php echo $fetch['name']; ?></h3>
+            <h4><?php echo "Student ID: ".$fetch['sid']."<br>"; 
+                      echo "Contact Number: ".$fetch['phone']."<br>";
+                      echo "Date of Birth: ".$fetch['dof']."<br>";
+                      echo "Semester: ".$fetch['semester']."<br>"; ?>
+            </h4>
+
+            <a href="updateProfile.php">
+                <button class="btn">Update Profile</button>
+            </a>
+            <a href="home.php?logout=<?php echo $sid; ?>">
+                    <button class="btn">Sign Out</button>
+            </a>
         </div>
+        </center>
     </div>
 </div>
 

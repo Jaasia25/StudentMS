@@ -11,8 +11,9 @@ if(isset($_POST["sid"])){
     $dof = $_POST['dof'];
     $password = $_POST['password'];
     $semester = $_POST['semester'];
+    // $photo = $_POST['photo'];
 
-    $sql = "INSERT INTO `student_info`(`sid`,`name`,`phone`,`dof`,`password`,`semester`) VALUES('$sid','$name','$phone','$dof','$password','$semester')";
+    $sql = "INSERT INTO `student_info`(`sid`,`name`,`phone`,`dof`,`password`,`semester`,`photo`) VALUES('$sid','$name','$phone','$dof','$password','$semester','')";
 
     if ($conn->query($sql) === TRUE ) 
     {

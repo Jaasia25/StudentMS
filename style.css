@@ -147,3 +147,60 @@ label{
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.home_profile .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    background-color: #5ca2d1ea;
+    padding: 20px;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: azure;
+    height: 400px;
+}
+
+.home_profile img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.home_profile h3{
+    font-size: 24px;
+    font-weight: 550;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 20px;
+}
+
+.home_profile h4{
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 20px;
+}
+
+.home_profile .btn{
+    padding: 10px;
+    width: auto;
+    background: #067BC6;
+    /* margin-right: 25px; */
+    color: white;
+    /* letter-spacing: 1px; */
+    font-weight: 550;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+    border-color: #034D7D;
+}
+
+.home_profile .btn:hover{
+    background: #BEE2F9;
+    color: #034D7D;
+}
