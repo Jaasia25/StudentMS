@@ -204,3 +204,69 @@ label{
     background: #BEE2F9;
     color: #034D7D;
 }
+
+
+/* update profile section  */
+
+.update_profile{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./image/bg2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.update_profile .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    background-color: #5ca2d1ea;
+    padding: 20px;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: azure;
+    height: 620px;
+}
+
+.update_profile img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.update_profile .container .form-control{
+
+    text-align: center;
+    color: #034D7D;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+
+
+.update_profile .btn{
+    padding: 10px;
+    background: #067BC6;
+    /* margin-right: 25px; */
+    color: white;
+    /* letter-spacing: 1px; */
+    font-weight: 550;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+    border-color: #034D7D;
+}
+
+.update_profile .btn:hover{
+    background: #BEE2F9;
+    color: #034D7D;
+}
+
+
