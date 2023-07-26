@@ -7,6 +7,7 @@ if(isset($_POST['submit'])){
 
     $myusername = mysqli_real_escape_string($conn,$_POST['sid']);
     $mypassword = mysqli_real_escape_string($conn,$_POST['password']);
+    $mypassword = md5($mypassword);
 
     $sql = "SELECT * FROM `student_info` WHERE sid = '$myusername' and password = '$mypassword'";
     $result = mysqli_query($conn,$sql) or die("SELECT Error");

@@ -16,11 +16,14 @@ if(isset($_POST['update_profile'])){
     $confirm_password = mysqli_real_escape_string($conn, md5($_POST['confirm_password']));
 
     if(!empty($update_password)||!empty($new_password)||!empty($confirm_password)){
-        if($update_password==$old_password && $new_password==$confirm_password){
+        if($update_password!=$old_password){
+            echo "<script>alert('Incorrect Old Password');</script>";
+        }elseif($new_password!=$confirm_password){
+            echo "<script>alert('Passwords do not match');</script>";
+        }
+        else{
             mysqli_query($conn, "UPDATE `student_info` SET password = '$confirm_password' WHERE sid = '$sid'") or die('query failed');
             echo "<script>alert('Profile Successfully Updated');</script>";
-        }else{
-            echo "<script>alert('Update Failed');</script>";
         }
     }
 }
@@ -68,7 +71,7 @@ if(isset($_POST['update_profile'])){
             }
         ?>
 
-        <form action="" method="post" enctype="multipart/form-data">                
+        <form action="" method="post">                
             <div class="md-6">
                 <label>Phone Number:</label>
                 <input class="form-control" type="text" name="update_phone" value="<?php echo $fetch['phone']?>">
@@ -90,10 +93,12 @@ if(isset($_POST['update_profile'])){
             <br>
             <button class="btn" value= "update profile" name="update_profile">Update Profile</button>
             </button>
-            <a href="home.php">
-                <button class="btn">Go Back</button>
-            </a>
+            
         </form>
+        <br>
+        <a href="home.php">
+            <button class="btn">Go Back</button>
+        </a>
         </center>
     </div>
 </div>

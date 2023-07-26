@@ -10,6 +10,7 @@ if(isset($_POST["sid"])){
     $phone = $_POST['phone'];
     $dof = $_POST['dof'];
     $password = $_POST['password'];
+    $password = md5($password);
     $semester = $_POST['semester'];
     // $photo = $_POST['photo'];
 
@@ -90,23 +91,23 @@ else{
             <form action="" method="post">
                 <div class="md-6">
                     <label for="sid2">Student ID:</label>
-                    <input class="form-control" type="text" id="sid" name="sid">
+                    <input class="form-control" type="text" id="sid" name="sid" placeholder="Enter Your School ID">
                 </div>
                 <div class="md-6">
                     <label for="name">Name:</label>
-                    <input class="form-control" type="text" id="name" name="name">
+                    <input class="form-control" type="text" id="name" name="name" placeholder="Enter Your Full Name">
                 </div>
                 <div class="md-6">
                     <label for="phone">Phone Number:</label>
-                    <input class="form-control" type="text" id="phone" name="phone">
+                    <input class="form-control" type="text" id="phone" name="phone" placeholder="Enter Your Contact No">
                 </div>
                 <div class="md-6">
                     <label for="dof">Date of Birth:</label>
-                    <input class="form-control" type="date" id="dof" name="dof">
+                    <input class="form-control" type="date" id="dof" name="dof" placeholder="Enter Your Date of Birth">
                 </div>
                 <div class="md-6">
                     <label for="password">Password:</label>
-                    <input class="form-control" type="text" id="password" name="password">
+                    <input class="form-control" type="password" id="password" name="password" placeholder="Enter a suitable Password">
                 </div>
                 <div class="md-6">
                     <label for="semester">Semester:</label>
