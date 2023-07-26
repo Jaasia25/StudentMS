@@ -137,7 +137,7 @@ label{
 
 
 
-/* profile section  */
+/* home and profile section  */
 
 .home_profile{
     width: 100%;
@@ -164,7 +164,7 @@ label{
     height: 400px;
 }
 
-.home_profile img{
+.home_profile .container img{
     height: 150px;
     width: 150px;
     border-radius: 50%;
@@ -186,7 +186,7 @@ label{
     margin-bottom: 20px;
 }
 
-.home_profile .btn{
+.home_profile .container .btn{
     padding: 10px;
     width: auto;
     background: #067BC6;
@@ -204,6 +204,73 @@ label{
     background: #BEE2F9;
     color: #034D7D;
 }
+
+.home_profile .menu{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+
+.sub-menu-wrap{
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.sub-menu-wrap.open-menu{
+    max-height: 400px;
+}
+
+.sub-menu{
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+}
+
+
+.sub-menu hr{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0 10px;
+}
+
+.sub-menu-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+}
+
+.sub-menu-link p{
+    width: 100%;
+}
+
+.sub-menu-link span{
+    font-size: 20px;
+    transition: translateX(5px);
+}
+
+.sub-menu-link:hover span{
+    transform: translateX(5px);
+}
+
+.sub-menu-link:hover p{
+    font-weight: 600;
+}
+
+
+
+
 
 
 /* update profile section  */

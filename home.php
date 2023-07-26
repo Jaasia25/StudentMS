@@ -42,6 +42,28 @@ if(isset($_GET['logout'])){
 
 
 <div class="home_profile">
+
+    <img src="image/menu-icon.png" class="menu" onclick="toggleMenu()">
+
+    <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+            <a href="#" class="sub-menu-link">
+                <p>My Courses</p>
+                <span>></span>
+            </a>
+            <hr>
+            <a href="#" class="sub-menu-link">
+                <p>Check Result</p>
+                <span>></span>
+            </a>
+            <hr>
+            <a href="#" class="sub-menu-link">
+                <p>Carry</p>
+                <span>></span>
+            </a>
+        </div>
+    </div>    
+
     <div class="container">
         <center>
         <div class="profile">
@@ -77,7 +99,14 @@ if(isset($_GET['logout'])){
 </div>
 
 
+<script>
+    let subMenu= document.getElementById("subMenu");
 
+    function toggleMenu(){
+        subMenu.classList.toggle("open-menu");
+    }
+
+</script>
 
 </body>
 </html>
